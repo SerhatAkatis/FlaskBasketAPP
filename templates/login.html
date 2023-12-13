@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block body %}
+<form class="form-signin" method="POST">
+  <h2 class="form-signin-heading">Lüten Giriş Yapın</h2>
+  <input
+    type="email"
+    name="email"
+    class="form-control"
+    placeholder="Mail Adresinizi Giriniz"
+    required
+    autofocus
+  />
+  <input
+    type="password"
+    name="password"
+    class="form-control"
+    placeholder="Şifrenizi Giriniz"
+    required
+  />
+  <button type="btn btn-lg btn-primary btn-block" type="submit">Giriş</button>
+</form>
+{% endblock %}

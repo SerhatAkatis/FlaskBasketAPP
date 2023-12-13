@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block body %}
+<h2>En Çok Satan Ürünler</h2>
+
+<div id="melon-list">
+  {% for melon in melon_list %}
+  <div class="melon-summary well">
+    <h2><a href="/melon/{{melon.id}}">{{melon.common_name}}</a></h2>
+
+    <h3>{{melon.price_str()}}</h3>
+    <a class="btn btn-primary" href="/melon/{{melon.id}}">Ürün Detayı</a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block body %}
+<h2>{{ display_melon.common_name }}</h2>
+<img class="product-img" src="{{ display_melon.imgurl }}" />
+<div class="cart well">
+  <h3>Ürün Fiyatı</h3>
+  <p>{{ display_melon.price_str() }}</p>
+  <a class="btn btn-primary" href="/add_to_cart/{{display_melon.id}}"
+    >Sepete Ekle</a
+  >
+</div>
+<div class="melon-details">
+  <h3>Ürün Detayları</h3>
+  <ul>
+    <li>Kavun türü: {{ display_melon.melon_type }}</li>
+    <li>Meyve rengi: {{ display_melon.flesh_color }}</li>
+    <li>Kabuk rengi: {{ display_melon.rind_color }}</li>
+    {% if display_melon.seedless %}
+    <li>Çekirdeksiz kavun</li>
+    {% else %}
+    <li class="warning">Uyarı! Bu kavunun çekirdekleri var</li>
+    {% endif %}
+  </ul>
+</div>
+{% endblock %}

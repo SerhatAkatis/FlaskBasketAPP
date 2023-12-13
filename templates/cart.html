@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block body %}
+<table class="table table-striped">
+  <tr>
+    <th>Kavun Adı</th>
+    <th>Miktar</th>
+    <th>Fiyat</th>
+    <th>Toplam</th>
+    <th>İşlemler</th>
+  </tr>
+
+  {% for key, value in display_cart.items() %}
+  <tr>
+    <td>{{ value["name"] }}</td>
+    <td>{{ value["qty"] }}</td>
+    <td>${{ "%.2f" | format(value["price"]) }}</td>
+    <td>${{ "%.2f" | format(value["qty"] * value["price"]) }}</td>
+    <td>
+      <a href="/remove/{{ key }}" class="btn btn-danger btn-sm">Kaldır</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+<h3>Toplam: ${{ "%.2f" | format(total) }}</h3>
+
+<a href="/checkout" class="btn btn-large btn-primary">Ödeme Yap</a>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block body %}
+<form class="form-signup" method="POST">
+  <h2 class="form-signup-heading">Kayıt Ol</h2>
+  <input
+    type="text"
+    name="first_name"
+    class="form-control"
+    placeholder="Ad"
+    required
+    autofocus
+  />
+  <input
+    type="text"
+    name="last_name"
+    class="form-control"
+    placeholder="Soyad"
+    required
+  />
+  <input
+    type="email"
+    name="email"
+    class="form-control"
+    placeholder="E-posta Adresi"
+    required
+  />
+  <input
+    type="password"
+    name="password"
+    class="form-control"
+    placeholder="Şifre"
+    required
+  />
+  <button type="submit" class="btn btn-lg btn-primary btn-block">
+    Kayıt Ol
+  </button>
+</form>
+{% endblock %}
