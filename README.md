@@ -1,3 +1,7 @@
+Projenin Ekran Kaydı için tıklayın   https://drive.google.com/drive/folders/16p3gcz8Ni3GjvJaECVc-jqemeAJni-Lr?usp=drive_link
+
+
+
 Projede Python ve Flask kullanılarak SQLite veritabanına kullanıcı ekleme, giriş yapma, ürün seçme, sepete ekleme ve sepetten silme işlemleri gerçekleştirilmiştir. Proje, aşağıda belirtilen adımları takip eder:
 
 Flask uygulaması başlatılır ve gerekli bağımlılıklar yüklenir.
