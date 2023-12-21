@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "melons.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "melons.py"
+    }
+  ]
+}
